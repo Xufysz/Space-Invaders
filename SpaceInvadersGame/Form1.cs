@@ -19,12 +19,19 @@ namespace SpaceInvadersGame
             this.KeyDown += this.Form1_KeyDown;
         }
 
-        Canon playerIcon = new Canon(25, 15, 450, 595);
+        Canon playerIcon;
 
-        Alien alien = new Alien(30, 30, 0, 0);
+        List<Alien> Aliens = new List<Alien>();
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            playerIcon = new Canon(25, 15, (this.picCanvas.Width / 2), (this.picCanvas.Height - 25));
+
+            for (int i = 0; i < 2; i++)
+            {
+                Aliens.Add(new Alien(25, 25, (this.picCanvas.Width / 2), 0));
+            }
+
             Timer timer = new Timer();
 
             timer.Interval = 10;
@@ -59,11 +66,16 @@ namespace SpaceInvadersGame
 
             SolidBrush alienBrush = new SolidBrush(Color.Green);
 
-            spaceInvanders.FillRectangle(alienBrush, Convert.ToSingle(alien.getPosX()), Convert.ToSingle(alien.getPosY()), alien.getWidth(), alien.getHeight());
+            for (int i = 0; i < Aliens.Count; i++)
+            {
+                // Draw aliens:
 
-            // Allow aliens to move:
+                spaceInvanders.FillRectangle(alienBrush, Convert.ToSingle(Aliens[i].getPosX()), Convert.ToSingle(Aliens[i].getPosY()), Aliens[i].getWidth(), Aliens[i].getHeight());
 
-            alien.move();
+                // Enable alien behaviours:
+
+                Aliens[i].move();
+            }
         }
 
         // Method used to handle the movement of the canon:

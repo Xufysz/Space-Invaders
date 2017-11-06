@@ -77,9 +77,9 @@ namespace SpaceInvadersGame
 
         }
 
-        public void reachBottom(int bottomOfScreen)
+        public bool reachBottom(int bottomOfScreen)
         {
-
+            return (this.positionY >= bottomOfScreen);
         }
     }
 }
