@@ -14,8 +14,10 @@ namespace SpaceInvadersGame
         private double positionX;
         private double positionY;
 
-        private int damageDealt = 25;
+        private int damageDealt = 100;
         private int health = 100;
+
+        private bool alive = true;
 
         // Constructor:
 
@@ -60,11 +62,16 @@ namespace SpaceInvadersGame
             return this.health;
         }
 
+        public bool getStatus()
+        {
+            return this.alive;
+        }
+
         // Behavioural methods:
 
         public void move()
         {
-            this.positionY += 0.75;
+            this.positionY += 0.5;
         }
 
         public void shoot()
@@ -74,12 +81,15 @@ namespace SpaceInvadersGame
 
         public void dead()
         {
+            this.alive = false;
 
+            this.height = 0;
+            this.width = 0;
         }
 
         public bool reachBottom(int bottomOfScreen)
         {
-            return (this.positionY >= bottomOfScreen);
+            return (this.positionY >= bottomOfScreen && alive);
         }
     }
 }

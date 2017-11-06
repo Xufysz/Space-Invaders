@@ -50,7 +50,7 @@ namespace SpaceInvadersGame
             return this.positionY;
         }
 
-        public int getDamageDealth()
+        public int getDamageDealt()
         {
             return this.damageDealt;
         }
@@ -84,14 +84,9 @@ namespace SpaceInvadersGame
             }
         }
 
-        public void shoot()
-        {
-
-        }
-
         public void dead()
         {
-
+            
         }
     }
 }
