@@ -15,7 +15,7 @@ namespace SpaceInvadersGame
         private int positionY;
 
         private int damageDealt = 100;
-        private int health = 200;
+        private int health = 100;
 
         // Constructor:
 
@@ -82,6 +82,16 @@ namespace SpaceInvadersGame
                     this.positionX -= 20;
                 }
             }
+        }
+
+        public void shoot()
+        {
+
+        }
+
+        public void dead()
+        {
+
         }
     }
 }
