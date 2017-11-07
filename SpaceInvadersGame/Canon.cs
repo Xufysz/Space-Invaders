@@ -68,7 +68,7 @@ namespace SpaceInvadersGame
             {
                 this.positionX -= 20;
 
-                if (this.positionX < leftSide) // Player has moved too far left
+                if (this.positionX  + this.width < leftSide) // Player has moved too far left
                 {
                     this.positionX += 20;
                 }
@@ -77,7 +77,7 @@ namespace SpaceInvadersGame
             {
                 this.positionX += 20;
 
-                if (this.positionX > rightSide) // Player has moved too far right
+                if (this.positionX + this.width > rightSide) // Player has moved too far right
                 {
                     this.positionX -= 20;
                 }

@@ -31,40 +31,52 @@ namespace SpaceInvadersGame
         {
             playerIcon = new Canon(25, 15, (this.picCanvas.Width / 2), (this.picCanvas.Height - 25));
 
-           // Create multiple array lists that represent the waves of aliens that come towards the player:
+            // Create multiple array lists that represent the waves of aliens that come towards the player:
+
+            int offsetX = this.picCanvas.Width / 12;
 
             List<Alien> row1 = new List<Alien>();
 
             for (int i = 0; i < 8; i++)
             {
-                row1.Add(new Alien(25, 50, (this.picCanvas.Width / 2), 0));
+                row1.Add(new Alien(25, 50, offsetX, 0));
+                offsetX += 100;
             }
 
             Aliens.Add(row1);
+
+            offsetX = this.picCanvas.Width / 12;
 
             List<Alien> row2 = new List<Alien>();
 
             for (int i = 0; i < 8; i++)
             {
-                row2.Add(new Alien(25, 50, (this.picCanvas.Width / 2), 50));
+                row2.Add(new Alien(25, 50, offsetX, 50));
+                offsetX += 100;
             }
 
             Aliens.Add(row2);
+
+            offsetX = this.picCanvas.Width / 12;
 
             List<Alien> row3 = new List<Alien>();
 
             for (int i = 0; i < 8; i++)
             {
-                row3.Add(new Alien(25, 50, (this.picCanvas.Width / 2), 100));
+                row3.Add(new Alien(25, 50, offsetX, 100));
+                offsetX += 100;
             }
 
             Aliens.Add(row3);
+
+            offsetX = this.picCanvas.Width / 12;
 
             List<Alien> row4 = new List<Alien>();
 
             for (int i = 0; i < 8; i++)
             {
-                row4.Add(new Alien(25, 50, (this.picCanvas.Width / 2), 150));
+                row4.Add(new Alien(25, 50, offsetX, 150));
+                offsetX += 100;
             }
 
             Aliens.Add(row4);
@@ -78,6 +90,13 @@ namespace SpaceInvadersGame
             timer.Tick += new EventHandler(timer_Tick);
 
             timer.Start();
+        }
+
+        // Method used to organize the X and Y location of the aliens:
+
+        private void setFormation(Alien row)
+        {
+
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -99,28 +118,64 @@ namespace SpaceInvadersGame
 
             spaceInvanders.FillRectangle(playerBrush, playerIcon.getPosX(), playerIcon.getPosY(), playerIcon.getWidth(), playerIcon.getHeight());
 
-            // Draw aliens in cube formation:
+            // Draw aliens in rectangular formation:
 
             SolidBrush alienBrush = new SolidBrush(Color.Green);
 
             for (int i = 0; i < Aliens[0].Count; i++)
             {
                 spaceInvanders.FillRectangle(alienBrush, Convert.ToSingle(Aliens[0][i].getPosX()), Convert.ToSingle(Aliens[0][i].getPosY()), Aliens[0][i].getWidth(), Aliens[0][i].getHeight());
+
+                // Enable behaviours:
+
+                Aliens[0][i].move();
+
+                if (Aliens[0][i].reachBottom(this.picCanvas.Height))
+                {
+
+                }
             }
 
             for (int i = 0; i < Aliens[1].Count; i++)
             {
                 spaceInvanders.FillRectangle(alienBrush, Convert.ToSingle(Aliens[1][i].getPosX()), Convert.ToSingle(Aliens[1][i].getPosY()), Aliens[1][i].getWidth(), Aliens[1][i].getHeight());
+
+                // Enable behaviours:
+
+                Aliens[1][i].move();
+
+                if (Aliens[1][i].reachBottom(this.picCanvas.Height))
+                {
+
+                }
             }
 
             for (int i = 0; i < Aliens[2].Count; i++)
             {
                 spaceInvanders.FillRectangle(alienBrush, Convert.ToSingle(Aliens[2][i].getPosX()), Convert.ToSingle(Aliens[2][i].getPosY()), Aliens[2][i].getWidth(), Aliens[2][i].getHeight());
+
+                // Enable behaviours:
+
+                Aliens[2][i].move();
+
+                if (Aliens[2][i].reachBottom(this.picCanvas.Height))
+                {
+
+                }
             }
 
             for (int i = 0; i < Aliens[3].Count; i++)
             {
                 spaceInvanders.FillRectangle(alienBrush, Convert.ToSingle(Aliens[3][i].getPosX()), Convert.ToSingle(Aliens[3][i].getPosY()), Aliens[3][i].getWidth(), Aliens[3][i].getHeight());
+
+                // Enable behaviours:
+
+                Aliens[3][i].move();
+
+                if (Aliens[3][i].reachBottom(this.picCanvas.Height))
+                {
+
+                }
             }
 
             // Draw bullets:
