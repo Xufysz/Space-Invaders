@@ -8,3 +8,13 @@ C:\Users\James\source\repos\SpaceInvadersGame\SpaceInvadersGame\obj\Debug\SpaceI
 C:\Users\James\source\repos\SpaceInvadersGame\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.csproj.CoreCompileInputs.cache
 C:\Users\James\source\repos\SpaceInvadersGame\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.exe
 C:\Users\James\source\repos\SpaceInvadersGame\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.pdb
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\bin\Debug\SpaceInvadersGame.exe.config
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\bin\Debug\SpaceInvadersGame.exe
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\bin\Debug\SpaceInvadersGame.pdb
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.Form1.resources
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.Properties.Resources.resources
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.csproj.GenerateResource.Cache
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.csproj.CoreCompileInputs.cache
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.exe
+C:\Users\Kyle\Documents\GitHub\Space-Invaders\SpaceInvadersGame\obj\Debug\SpaceInvadersGame.pdb
